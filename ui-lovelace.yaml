@@ -1,0 +1,364 @@
+########################################################## Lovelace card   #################################
+resources:
+  - url: /local/custom-lovelace-master/thermostat-card/thermostat-card.js?v=1
+    type: module
+  - url: /community_plugin/button-entity-row/button-entity-row.js
+    type: module
+  - url: /local/wired-cards.js
+    type: module
+  - url: /community_plugin/button-card/button-card.js
+    type: module
+  - url: /local/content-card-example.js
+    type: js
+name: My Awesome Home
+
+views:
+  - title: Home 
+    icon: mdi:home
+    path: Home
+    cards:
+      - type: thermostat
+        entity: climate.bedrooms
+        name: Bedrooms
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: Ground
+        theme: default
+
+      - type: entity-button
+        name: Bedrooms
+        icon: mdi:arrow-right-bold
+#        color: rgb(66, 134, 244)
+        entity: light.room
+        tap_action:
+          action: navigate 
+          navigation_path: /lovelace/Bedrooms
+
+      - type: entity-button
+        name: Ground
+        icon: mdi:arrow-right-bold
+        entity: light.room
+        tap_action:
+          action: navigate 
+          navigation_path: /lovelace/Ground
+
+      - type: entity-button
+        name: Floor Plan
+        icon: mdi:arrow-right-bold
+        entity: light.room
+        tap_action:
+          action: navigate 
+          navigation_path: /lovelace/Floor Plan
+
+
+      - type: entity-button
+        name: Top View
+        icon: mdi:arrow-right-bold
+        entity: light.room
+        tap_action:
+          action: navigate 
+          navigation_path: /lovelace/Top View          
+
+  - title: Bedrooms
+    path: Bedrooms
+    cards:
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B1
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B2
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B3
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B4
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B5
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B6
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B7
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: B8
+        theme: default
+
+      - type: entity-button
+        name: Back to Home
+        entity: light.room
+        icon: mdi:home
+        tap_action:
+          action: navigate 
+          navigation_path: /lovelace/Home
+
+
+
+  - title: Ground
+    path: Ground
+    cards:
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G1
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G2
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G3
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G4
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G5
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G6
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G7
+        theme: default
+      - type: thermostat
+        entity: climate.bedrooms
+        name: G8
+        theme: default
+
+
+      - type: entity-button
+        name: Back to Home
+        icon: mdi:home
+        entity: light.room
+        tap_action:
+          action: navigate 
+          navigation_path: /lovelace/Home
+########################################## Floor Plan  Window #########################################################
+
+  - title: Floor plan
+    panel: true
+    path: Floor Plan
+    cards:
+      - type: picture-elements
+        image: /local/floorplan.png                 ######  image to be displayed ####
+        elements:
+          - type: state-badge
+            entity: sensor.ecobee                   ###### Attached Sensor readings (values) ########
+            style:                                  ###### Size of Sensor Icon #######
+              top: 32%
+              left: 65%
+              font-size: 15px 
+          
+          - type: state-label
+            entity: sensor.ecobee
+            prefix: "Temp "
+            #icon: mdi:lightbulb
+            tap_action:
+              action: more-info
+            style:
+              top: 39%
+              left: 34%
+              font-size: 20px
+          - type: state-icon
+            entity: switch.living_room_light
+#            name: Living room light
+            tap_action:
+              action: toggle
+            style:
+              top: 53%
+              left: 60%
+              --iron-icon-height: 42px
+              --iron-icon-width: 42px
+
+########################################### Living room camera ###########################################
+          - type: icon
+            title: Ground room camera
+            icon: mdi:cctv
+            entity: camera.living_room_camera
+            style:
+              top: 57%
+              left: 70%
+              --iron-icon-fill-color: "#11AB7D"
+              --iron-icon-height: 40px
+              --iron-icon-width: 40px
+########################################### Living room camera End ###########################################
+########################################### fullscreen #######################################################
+          - type: icon
+            icon: mdi:fullscreen
+            title: Top View
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/Top View
+            style:
+              top: 50.5%
+              left: 50.5%
+              --iron-icon-fill-color: "#11AB7D"
+              --iron-icon-height: 60px
+              --iron-icon-width: 60px
+########################################### fullscreen End #######################################################
+
+
+########################################### Bedrooms and ground Light icon #######################################################
+########################## Bedrooms light icon ####################
+          - type: icon
+            icon: mdi:lightbulb-on
+            title: Bed room Floor Plan
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/Bedrooms
+            style:
+              top: 30.5%
+              left: 50.5%
+              --iron-icon-fill-color: "#cc0000"
+              --iron-icon-height: 50px
+              --iron-icon-width: 50px
+            
+########################## Ground light icon####################
+          - type: icon
+            icon: mdi:lightbulb-on
+            title: Ground Floor Plan
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/Ground
+            style:
+              top: 60.5%
+              left: 50.5%
+              --iron-icon-fill-color: "#1a2421"
+              --iron-icon-height: 50px
+              --iron-icon-width: 50px
+########################################### Bedrooms and ground Light icon End #######################################################
+
+########################################### Bedrooms and ground Light icon End #######################################################
+          - type: service-button
+            title: Turn lights off
+            service: scripts.turn_off
+            service_data:
+            entity_id: group.all_lights
+            style:
+              top: 93%
+              left: 65%
+
+########################################## Floor Plan Window END #########################################################
+
+########################################## Top View Window #########################################################
+  - title: Top View
+    panel: true
+    path: Top View
+    cards:
+      - type: picture-elements
+        image: /local/TopView.png
+        elements:
+          - type: state-badge
+            entity: sensor.ecobee
+            style:
+              top: 35%
+              left: 65%
+              font-size: 17px
+
+          - type: state-label
+            entity: sensor.ecobee
+            prefix: "Temp "
+            #icon: mdi:lightbulb
+            tap_action:
+              action: more-info
+            style:
+              top: 39%
+              left: 33.7%
+              font-size: 20px
+          - type: state-icon
+            entity: switch.Bedroom-Switch
+#            name: Living room light
+            tap_action:
+              action: toggle
+            style:
+              top: 53%
+              left: 60%
+              --iron-icon-height: 42px
+              --iron-icon-width: 42px
+
+########################################### Living room camera ###########################################
+          - type: icon
+            title: Ground room camera
+            icon: mdi:cctv
+            entity: camera.living_room_camera
+            style:
+              top: 57%
+              left: 68.5%
+              --iron-icon-fill-color: "#11AB7D"
+              --iron-icon-height: 40px
+              --iron-icon-width: 40px
+########################################### Living room camera End ###########################################
+
+########################################### fullscreen #######################################################
+          - type: icon
+            icon: mdi:fullscreen
+            title: Back to floor Plan
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/Floor Plan
+            style:
+              top: 50.5%
+              left: 50.5%
+              --iron-icon-fill-color: "#11AB7D"
+              --iron-icon-height: 60px
+              --iron-icon-width: 60px
+########################################### fullscreen End #######################################################
+
+
+########################################### Bedrooms and ground Light icon #######################################################
+########################## Bedrooms light icon ####################
+          - type: icon
+            icon: mdi:lightbulb-on
+            title: Bed room Floor Plan
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/Bedrooms
+            style:
+              top: 30.5%
+              left: 50.5%
+              --iron-icon-fill-color: "#cc0000"
+              --iron-icon-height: 50px
+              --iron-icon-width: 50px
+            
+########################## Ground light icon####################
+          - type: icon
+            icon: mdi:lightbulb-on
+            title: Ground Floor Plan
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/Ground
+            style:
+              top: 60.5%
+              left: 50.5%
+              --iron-icon-fill-color: "#1a2421"
+              --iron-icon-height: 50px
+              --iron-icon-width: 50px
+########################################### Bedrooms and ground Light icon End #######################################################
+
+########################################### Bedrooms and ground Light icon End #######################################################
+          - type: service-button
+            title: Turn lights off
+            service: scripts.turn_off
+            service_data:
+            entity_id: group.all_lights
+            style:
+              top: 93%
+              left: 65%
+########################################## Top View Window END #########################################################

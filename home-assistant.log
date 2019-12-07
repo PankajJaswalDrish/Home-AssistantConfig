@@ -1,0 +1,163 @@
+2019-12-05 14:43:15 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 406, in _async_add_entity
+    await entity.async_added_to_hass()
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/sensor.py", line 132, in async_added_to_hass
+    await self._subscribe_topics()
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/sensor.py", line 199, in _subscribe_topics
+    "qos": self._config[CONF_QOS],
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 83, in async_subscribe_topics
+    await requested.resubscribe_if_necessary(hass, current)
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/subscription.py", line 40, in resubscribe_if_necessary
+    hass, self.topic, self.message_callback, self.qos, self.encoding
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/__init__.py", line 445, in async_subscribe
+    encoding,
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/__init__.py", line 837, in async_subscribe
+    await self._async_perform_subscription(topic, qos)
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/__init__.py", line 873, in _async_perform_subscription
+    _raise_on_error(result)
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/__init__.py", line 974, in _raise_on_error
+    "Error talking to MQTT: {}".format(mqtt.error_string(result_code))
+homeassistant.exceptions.HomeAssistantError: Error talking to MQTT: The client is not currently connected.
+2019-12-05 14:43:15 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 14:43:15 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-05 14:43:15 WARNING (MainThread) [homeassistant.components.generic_thermostat.climate] No previously saved temperature, setting to 17.0
+2019-12-05 15:03:16 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 15:03:16 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-05 15:20:17 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 15:20:17 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-05 15:28:49 ERROR (SyncWorker_3) [homeassistant.util.yaml.loader] while parsing a block mapping
+  in "/config/ui-lovelace.yaml", line 155, column 5
+expected <block end>, but found '-'
+  in "/config/ui-lovelace.yaml", line 158, column 5
+2019-12-05 15:29:30 ERROR (SyncWorker_1) [homeassistant.util.yaml.loader] mapping values are not allowed here
+  in "/config/ui-lovelace.yaml", line 159, column 13
+2019-12-05 15:35:18 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 15:35:18 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-05 15:51:22 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 15:51:22 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-05 15:58:57 ERROR (SyncWorker_3) [homeassistant.util.yaml.loader] while parsing a block mapping
+  in "/config/ui-lovelace.yaml", line 159, column 9
+expected <block end>, but found '-'
+  in "/config/ui-lovelace.yaml", line 169, column 9
+2019-12-05 16:06:23 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 16:06:23 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-05 16:25:24 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 16:25:24 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-05 16:45:25 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 16:45:25 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-05 17:01:26 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 17:01:26 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-05 17:21:27 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 17:21:27 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-05 17:37:28 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 17:37:28 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-05 17:53:29 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 17:53:29 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-05 18:11:30 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 18:11:30 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-05 18:29:31 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-05 18:29:31 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-06 10:04:10 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 10:04:10 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-06 10:22:11 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 10:22:11 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 10:39:12 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 10:39:12 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 10:56:13 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 10:56:13 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-06 11:15:14 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 11:15:14 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 11:32:15 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 11:32:15 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-06 11:52:16 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 11:52:16 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 12:09:17 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 12:09:17 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-06 12:29:18 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 12:29:18 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-06 12:44:19 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 12:44:19 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 13:01:20 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 13:01:20 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-06 13:19:21 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 13:19:21 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-06 13:38:22 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 13:38:22 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-06 13:58:23 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 13:58:23 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 14:15:24 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 14:15:24 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-06 14:30:25 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 14:30:25 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-06 14:45:26 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 14:45:26 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 14:49:27 ERROR (MainThread) [homeassistant.components.homeassistant] homeassistant/turn_off cannot be called without entity_id
+2019-12-06 14:49:30 ERROR (MainThread) [homeassistant.components.homeassistant] homeassistant/turn_off cannot be called without entity_id
+2019-12-06 14:49:32 ERROR (MainThread) [homeassistant.components.homeassistant] homeassistant/turn_off cannot be called without entity_id
+2019-12-06 15:02:27 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 15:02:27 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-06 15:21:28 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 15:21:28 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-06 15:37:29 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 15:37:29 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-06 15:55:30 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 15:55:30 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-06 16:10:31 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 16:10:31 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-06 16:30:32 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 16:30:32 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 16:37:03 ERROR (SyncWorker_4) [homeassistant.util.yaml.loader] while scanning a simple key
+  in "/config/ui-lovelace.yaml", line 282, column 1
+could not find expected ':'
+  in "/config/ui-lovelace.yaml", line 282, column 40
+2019-12-06 16:37:14 ERROR (SyncWorker_0) [homeassistant.util.yaml.loader] while scanning a simple key
+  in "/config/ui-lovelace.yaml", line 282, column 1
+could not find expected ':'
+  in "/config/ui-lovelace.yaml", line 282, column 40
+2019-12-06 16:37:31 ERROR (SyncWorker_4) [homeassistant.util.yaml.loader] while scanning a simple key
+  in "/config/ui-lovelace.yaml", line 282, column 1
+could not find expected ':'
+  in "/config/ui-lovelace.yaml", line 282, column 40
+2019-12-06 16:47:33 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 16:47:33 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-06 17:06:34 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 17:06:34 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-06 17:24:35 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 17:24:35 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-06 17:42:36 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 17:42:36 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-06 17:57:37 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 17:57:37 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-06 18:14:38 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 18:14:38 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-06 18:34:39 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-06 18:34:39 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-07 10:30:35 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 10:30:35 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-07 10:49:36 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 10:49:36 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 18 minutes
+2019-12-07 11:07:37 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 11:07:37 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-12-07 11:27:38 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 11:27:38 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-07 11:42:39 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 11:42:39 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-07 12:01:42 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 12:01:42 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-07 12:18:43 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 12:18:43 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-07 12:34:44 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 12:34:44 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-07 12:53:45 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 12:53:45 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-07 13:09:46 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 13:09:46 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 19 minutes
+2019-12-07 13:28:47 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 13:28:47 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes
+2019-12-07 13:43:48 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 13:43:48 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 16 minutes
+2019-12-07 13:59:49 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 13:59:49 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 17 minutes
+2019-12-07 14:16:50 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1076)')]
+2019-12-07 14:16:50 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 15 minutes

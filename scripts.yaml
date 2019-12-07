@@ -1,0 +1,25 @@
+#### Turn off all lights - Script ####
+
+turn_off_lights:
+  alias: Turn lights off 
+  sequence:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.living_room_light
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bedroom_light
+    - service: light.turn_off
+      data:
+        entity_id: light.desk_light
+
+
+
+#### Service button for script ####
+
+    - type: service-button
+      title: Turn lights off
+      service: script.turn_off_lights
+      style:
+        top: 93%
+        left: 65%

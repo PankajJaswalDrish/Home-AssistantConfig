@@ -1,0 +1,75 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+# Text to speech
+tts:
+  - platform: google_translate
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+lovelace:
+  mode: yaml
+################################### MQTT #############################
+mqtt:
+  broker: tailor.cloudmqtt.com
+  port: 17023
+  username: svbzbhlb
+  password: qZb_RCqFvId_
+
+switch:
+  - platform: mqtt
+    name: "Bedroom-Switch"
+    state_topic: "Temp"
+    command_topic: "Temp"
+    availability_topic: "Temp"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: false
+    qos: 0
+    retain: true
+
+
+sensor:
+  - platform: mqtt
+    name: "ecobee"
+    state_topic: "Temp"
+# Example configuration.yaml entry
+
+#climate:
+#  - platform: mqtt
+#    name: "ecobee"
+#    current_temperature_topic: "Temp"
+#    current_temperature_topic: "Humidity"
+
+
+light:
+  - platform: mqtt
+    name: room
+    command_topic: "next"
+
+# Example configuration.yaml entry
+
+
+climate:
+  - platform: generic_thermostat
+    name: bedrooms
+    heater: switch.bedrooms_heater
+    target_sensor: sensor.bedrooms_temperature
+    min_temp: 15
+    max_temp: 21
+    ac_mode: false
+    target_temp: 17
+    cold_tolerance: 0.3
+    hot_tolerance: 0
+    min_cycle_duration:
+      seconds: 5
+    keep_alive:
+      minutes: 3
+    initial_hvac_mode: "off"
+    away_temp: 16
+    precision: 0.1
